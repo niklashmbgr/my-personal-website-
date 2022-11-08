@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 		margin: 0;
         height: 100vh;
         font-size: 1rem;
+        background: black;
     }
 
 `;
