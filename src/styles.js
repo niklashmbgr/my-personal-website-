@@ -29,5 +29,5 @@ export const GlobalStyle = createGlobalStyle`
         background: #e7f6f2;
     }
 
-
+    
 `;
