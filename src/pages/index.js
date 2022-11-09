@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "./components/Header";
-import TypeText from "./components/TypeText";
+import Header from "../components/Header/index";
+import TypeText from "../components/TypeText/index";
 
 export default function Home() {
   return (
