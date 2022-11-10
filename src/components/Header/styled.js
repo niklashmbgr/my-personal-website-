@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const StyledHeader = styled.header`
+const StyledHeader = styled(motion.header)`
   position: sticky;
   top: 0.5rem;
   margin: 1rem;
