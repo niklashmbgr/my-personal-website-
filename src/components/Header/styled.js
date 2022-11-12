@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const StyledHeader = styled.header`
+const StyledHeader = styled(motion.header)`
   position: sticky;
-  top: 0.5rem;
+  top: 0;
   margin: 1rem;
   border-radius: 20px;
   display: flex;

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header/index";
 import TypeText from "../components/TypeText/index";
+import Section from "../components/Section";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
       <Header />
       <TypeText />
+      <Section />
       <footer></footer>
     </>
   );

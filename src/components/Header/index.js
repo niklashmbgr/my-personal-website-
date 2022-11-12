@@ -4,7 +4,19 @@ import AnimatedDiv from "../AnimatedDiv/styled";
 
 export default function Header() {
   return (
-    <StyledHeader>
+    <StyledHeader
+      initial={{
+        opacity: 0,
+        scale: 1,
+      }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+      }}
+      transition={{
+        duration: 1.5,
+      }}
+    >
       <AnimatedDiv
         initial={{
           x: -400,
