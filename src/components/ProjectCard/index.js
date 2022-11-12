@@ -5,6 +5,7 @@ import Image from "next/image";
 import cofteaBanner from "../../../public/COFTEAbanner.png";
 import Link from "next/link";
 import StyledLink from "../Link/styled";
+import SVG from "../../../public/SVG/svg";
 
 export default function ProjectCard() {
   const [isClicked, setIsClicked] = useState(true);
@@ -39,7 +40,10 @@ export default function ProjectCard() {
 
   return (
     <>
-      <AnimatedDiv onClick={setIsClicked}>
+      <AnimatedDiv>
+        <StyledButton onClick={setIsClicked}>
+          <SVG variant="close" />
+        </StyledButton>
         <h2>COFTEA</h2>
         <Image
           src={cofteaBanner}
