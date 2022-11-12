@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import StyledButton from "../Button/styled";
 import AnimatedDiv from "../AnimatedDiv/styled";
+import StyledForm from "./styled";
 
 export default function ContactForm() {
   const [isClicked, setIsClicked] = useState(true);
@@ -70,8 +71,8 @@ export default function ContactForm() {
   }
 
   return (
-    <AnimatedDiv onClick={setIsClicked}>
-      <form ref={form} onSubmit={sendEmail}>
+    <AnimatedDiv>
+      <StyledForm ref={form} onSubmit={sendEmail}>
         <input
           type="text"
           name="from_name"
@@ -85,9 +86,9 @@ export default function ContactForm() {
           required
         ></input>
         <textarea name="message" placeholder="your message" required></textarea>
-        <button>send </button>
+        <StyledButton variant="send">send </StyledButton>
         {result ? <Message /> : null}
-      </form>
+      </StyledForm>
     </AnimatedDiv>
   );
 }
