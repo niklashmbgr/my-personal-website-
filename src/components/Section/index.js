@@ -8,24 +8,7 @@ export default function Section() {
   return (
     <StyledSection>
       <ProfileImage />
-      <AnimatedDiv
-        variant="about-me"
-        initial={{
-          y: 500,
-          opacity: 0,
-          scale: 1,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1,
-        }}
-      >
-        <Article />
-      </AnimatedDiv>
+      <Article />
       <ProjectCard />
     </StyledSection>
   );
