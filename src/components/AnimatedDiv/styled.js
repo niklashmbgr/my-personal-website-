@@ -10,6 +10,14 @@ const AnimatedDiv = styled(motion.div)`
       border-radius: 2rem;
       background-color: #99c4c8;
     `}
+  ${({ variant }) =>
+    variant === "projects" &&
+    css`
+      padding: 0.5rem;
+      margin-top: 1rem;
+      border-radius: 2rem;
+      background-color: #c7d36f;
+    `}
 `;
 
 export default AnimatedDiv;
