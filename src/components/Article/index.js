@@ -12,7 +12,6 @@ export default function Article() {
   if (isClicked) {
     return (
       <AnimatedDiv
-        onClick={setIsClicked}
         variant="about-me"
         initial={{
           y: 500,
