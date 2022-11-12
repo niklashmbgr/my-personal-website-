@@ -1,7 +1,14 @@
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import StyledButton from "../Button/styled";
+import AnimatedDiv from "../AnimatedDiv/styled";
 
 export default function ContactForm() {
+  const [isClicked, setIsClicked] = useState(true);
+
+  const handleClick = () => {
+    setIsClicked(false);
+  };
   const [result, showResult] = useState(false);
   const Message = () => {
     return (
@@ -35,18 +42,52 @@ export default function ContactForm() {
     showResult(true);
   };
 
+  if (isClicked) {
+    return (
+      <>
+        <AnimatedDiv
+          variant="contact-me"
+          initial={{
+            y: 500,
+            opacity: 0,
+            scale: 1,
+          }}
+          animate={{
+            y: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.4,
+          }}
+        >
+          <StyledButton type="button" onClick={handleClick}>
+            contact me
+          </StyledButton>
+        </AnimatedDiv>
+      </>
+    );
+  }
+
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <input
-        type="text"
-        name="from_name"
-        placeholder="your full name"
-        required
-      ></input>
-      <input type="text" name="email" placeholder="your email" required></input>
-      <textarea name="message" placeholder="your message" required></textarea>
-      <button>send </button>
-      <div>{result ? <Message /> : null} </div>
-    </form>
+    <AnimatedDiv onClick={setIsClicked}>
+      <form ref={form} onSubmit={sendEmail}>
+        <input
+          type="text"
+          name="from_name"
+          placeholder="your full name"
+          required
+        ></input>
+        <input
+          type="text"
+          name="email"
+          placeholder="your email"
+          required
+        ></input>
+        <textarea name="message" placeholder="your message" required></textarea>
+        <button>send </button>
+        {result ? <Message /> : null}
+      </form>
+    </AnimatedDiv>
   );
 }
