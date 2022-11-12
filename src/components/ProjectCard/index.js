@@ -3,6 +3,8 @@ import { useState } from "react";
 import AnimatedDiv from "../AnimatedDiv/styled";
 import Image from "next/image";
 import cofteaBanner from "../../../public/COFTEAbanner.png";
+import Link from "next/link";
+import StyledLink from "../Link/styled";
 
 export default function ProjectCard() {
   const [isClicked, setIsClicked] = useState(true);
@@ -47,6 +49,12 @@ export default function ProjectCard() {
           priority
         />
         <p>description:</p>
+        <Link href="https://github.com/" legacyBehavior>
+          <StyledLink>Github</StyledLink>
+        </Link>
+        <Link href="https://vercel.com/" legacyBehavior>
+          <StyledLink>Live Demo</StyledLink>
+        </Link>
       </AnimatedDiv>
     </>
   );
