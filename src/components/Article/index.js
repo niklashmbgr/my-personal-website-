@@ -11,22 +11,7 @@ export default function Article() {
 
   if (isClicked) {
     return (
-      <AnimatedDiv
-        variant="about-me"
-        initial={{
-          y: 500,
-          opacity: 0,
-          scale: 1,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1,
-        }}
-      >
+      <AnimatedDiv variant="about-me">
         <StyledButton type="button" onClick={handleClick}>
           about me
         </StyledButton>
@@ -34,23 +19,7 @@ export default function Article() {
     );
   }
   return (
-    <AnimatedDiv
-      onClick={setIsClicked}
-      variant="about-me"
-      initial={{
-        y: 500,
-        opacity: 0,
-        scale: 1,
-      }}
-      animate={{
-        y: 0,
-        opacity: 1,
-        scale: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-    >
+    <AnimatedDiv onClick={setIsClicked} variant="about-me">
       <h2>about me</h2>
       <ul>
         <li>lorem</li>
