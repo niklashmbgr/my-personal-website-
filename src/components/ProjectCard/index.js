@@ -46,10 +46,10 @@ export default function ProjectCard() {
         <StyledText>
           This was my capstone project while studying at neuefische.
         </StyledText>
-        <Link href="https://github.com/" legacyBehavior>
+        <Link href="https://github.com/niklashmbgr/coftea-app" legacyBehavior>
           <StyledLink>Github</StyledLink>
         </Link>
-        <Link href="https://vercel.com/" legacyBehavior>
+        <Link href="https://coftea.vercel.app/" legacyBehavior>
           <StyledLink>Live Demo</StyledLink>
         </Link>
       </AnimatedDiv>
