@@ -6,6 +6,8 @@ import cofteaBanner from "../../../public/COFTEAbanner.png";
 import Link from "next/link";
 import StyledLink from "../Link/styled";
 import SVG from "../../../public/SVG/svg";
+import StyledText from "../StyledText/styled";
+import StyledProjectHeadline from "../StyledProjectHeadline/styled";
 
 export default function ProjectCard() {
   const [isClicked, setIsClicked] = useState(true);
@@ -25,11 +27,11 @@ export default function ProjectCard() {
 
   return (
     <>
-      <AnimatedDiv>
+      <AnimatedDiv variant="projects">
         <StyledButton onClick={setIsClicked}>
           <SVG variant="close" />
         </StyledButton>
-        <h2>COFTEA</h2>
+        <StyledProjectHeadline>COFTEA</StyledProjectHeadline>
         <Image
           src={cofteaBanner}
           alt="Project COFTEA"
@@ -37,7 +39,13 @@ export default function ProjectCard() {
           height={150}
           priority
         />
-        <p>description:</p>
+
+        <StyledText>
+          COFTEA is a fictitious store which sells coffee and tea products.
+        </StyledText>
+        <StyledText>
+          This was my capstone project while studying at neuefische.
+        </StyledText>
         <Link href="https://github.com/" legacyBehavior>
           <StyledLink>Github</StyledLink>
         </Link>

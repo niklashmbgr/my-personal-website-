@@ -12,6 +12,9 @@ const AnimatedDiv = styled(motion.div)`
   ${({ variant }) =>
     variant === "projects" &&
     css`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 0.5rem;
       margin-top: 1rem;
       border-radius: 2rem;
