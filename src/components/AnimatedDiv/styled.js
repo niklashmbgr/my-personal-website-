@@ -3,12 +3,11 @@ import { motion } from "framer-motion";
 
 const AnimatedDiv = styled(motion.div)`
   ${({ variant }) =>
-    variant === "about-me" &&
+    variant === "section" &&
     css`
-      padding: 0.5rem;
-      margin-top: 1rem;
-      border-radius: 2rem;
-      background-color: #99c4c8;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     `}
   ${({ variant }) =>
     variant === "projects" &&
