@@ -17,7 +17,22 @@ export default function ProjectCard() {
 
   if (isClicked) {
     return (
-      <AnimatedDiv variant="projects">
+      <AnimatedDiv
+        variant="projects"
+        initial={{
+          y: 500,
+          opacity: 0,
+          scale: 0,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.8,
+        }}
+      >
         <StyledButton type="button" onClick={handleClick}>
           my projects
         </StyledButton>

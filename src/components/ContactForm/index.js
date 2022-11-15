@@ -46,7 +46,22 @@ export default function ContactForm() {
   if (isClicked) {
     return (
       <>
-        <AnimatedDiv variant="contact-me">
+        <AnimatedDiv
+          variant="contact-me"
+          initial={{
+            y: 500,
+            opacity: 0,
+            scale: 0,
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.9,
+          }}
+        >
           <StyledButton type="button" onClick={handleClick}>
             contact me
           </StyledButton>
