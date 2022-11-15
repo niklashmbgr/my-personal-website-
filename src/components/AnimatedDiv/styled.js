@@ -18,7 +18,7 @@ const AnimatedDiv = styled(motion.div)`
       padding: 0.5rem;
       margin-top: 1rem;
       border-radius: 2rem;
-      background-color: #c7d36f;
+      background-color: #a8e890;
     `}
     ${({ variant }) =>
     variant === "contact-me" &&
@@ -26,7 +26,7 @@ const AnimatedDiv = styled(motion.div)`
       padding: 0.5rem;
       margin-top: 1rem;
       border-radius: 2rem;
-      background-color: #ff7171;
+      background-color: #749f82;
     `}
 `;
 
