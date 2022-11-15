@@ -20,13 +20,11 @@ export const GlobalStyle = createGlobalStyle`
 	}
 	html {
 		font-size: 16px;
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden; 
+        font-family: "Poppins",sans-serif;
 	}
 	body {
-        font-family: "Poppins",sans-serif;
-		margin: 0;
+      
+        margin: 0;
         padding:0;
         font-size: 1rem;
         background: #e7f6f2;
