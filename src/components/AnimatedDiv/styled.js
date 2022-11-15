@@ -3,20 +3,22 @@ import { motion } from "framer-motion";
 
 const AnimatedDiv = styled(motion.div)`
   ${({ variant }) =>
-    variant === "about-me" &&
+    variant === "section" &&
     css`
-      padding: 0.5rem;
-      margin-top: 1rem;
-      border-radius: 2rem;
-      background-color: #99c4c8;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     `}
   ${({ variant }) =>
     variant === "projects" &&
     css`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 0.5rem;
       margin-top: 1rem;
       border-radius: 2rem;
-      background-color: #c7d36f;
+      background-color: #a8e890;
     `}
     ${({ variant }) =>
     variant === "contact-me" &&
@@ -24,7 +26,7 @@ const AnimatedDiv = styled(motion.div)`
       padding: 0.5rem;
       margin-top: 1rem;
       border-radius: 2rem;
-      background-color: #ff7171;
+      background-color: #749f82;
     `}
 `;
 

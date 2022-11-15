@@ -3,7 +3,7 @@ import StyledHeadline from "./styled";
 
 export default function TypeText() {
   const [text] = useTypewriter({
-    words: ["Junior Frontend Developer"],
+    words: ["Hello, I'm Niklas"],
     loop: 1,
   });
 

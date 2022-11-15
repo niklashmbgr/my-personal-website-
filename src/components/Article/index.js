@@ -1,31 +1,29 @@
-import StyledButton from "../Button/styled";
-import { useState } from "react";
-import AnimatedDiv from "../AnimatedDiv/styled";
+import StyledArticle from "../Article/styled";
+import StyledText from "../StyledText/styled";
+import StyledSpan from "../StyledSpan/styled";
 
 export default function Article() {
-  const [isClicked, setIsClicked] = useState(true);
-
-  const handleClick = () => {
-    setIsClicked(false);
-  };
-
-  if (isClicked) {
-    return (
-      <AnimatedDiv variant="about-me">
-        <StyledButton type="button" onClick={handleClick}>
-          about me
-        </StyledButton>
-      </AnimatedDiv>
-    );
-  }
   return (
-    <AnimatedDiv onClick={setIsClicked} variant="about-me">
-      <h2>about me</h2>
-      <ul>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-      </ul>
-    </AnimatedDiv>
+    <StyledArticle>
+      <StyledText>
+        This Summer, I decided to embark on a completely new career path.
+      </StyledText>
+      <StyledText>
+        So I took a 12-week Web Development Bootcamp at neuefische.
+      </StyledText>
+      <StyledText>
+        Now I enjoy myself by keep on scratching the tip of the web development
+        iceberg everyday
+        <StyledSpan role="img" aria-label="iceberg">
+          🗻
+        </StyledSpan>
+        <StyledSpan role="img" aria-label="man-technologist">
+          👨‍💻
+        </StyledSpan>
+        <StyledSpan role="img" aria-label="hammer-and-wrench">
+          🛠
+        </StyledSpan>
+      </StyledText>
+    </StyledArticle>
   );
 }
