@@ -13,7 +13,7 @@ export default function Article() {
       </StyledText>
       <StyledText>
         Now I enjoy myself by keep on scratching the tip of the web development
-        iceberg
+        iceberg everyday
         <StyledSpan role="img" aria-label="iceberg">
           🗻
         </StyledSpan>
